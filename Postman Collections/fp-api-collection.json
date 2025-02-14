@@ -336,7 +336,26 @@
 								}
 							}
 						},
-						"url": "{{HOSTNAME}}/api/v2/quick_bridge/shiptos",
+						"url": {
+							"raw": "{{HOSTNAME}}/api/v2/quick_bridge/customers/:customer_erp_id/ship_tos",
+							"host": [
+								"{{HOSTNAME}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"quick_bridge",
+								"customers",
+								":customer_erp_id",
+								"ship_tos"
+							],
+							"variable": [
+								{
+									"key": "customer_erp_id",
+									"value": ""
+								}
+							]
+						},
 						"description": "### **POST /api/v2/quick_bridge/shiptos**\n\nThis endpoint is used to create a new ship-to location in the system.\n\n**Request Body**\n\n- `name` (text, required): The name of the shipto.\n    \n- `erp_id` (text, required): The ERP identifier for the shipto.\n    \n- `address` (text, required): The physical address of the shipto.\n    \n- `po_number` (text, required): The purchase order number associated with the shipto.\n    \n- `lat` (float, required): The latitude coordinate of the shipto.\n    \n- `lng` (float, required): The longitude coordinate of the shipto."
 					},
 					"response": [
@@ -883,7 +902,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"type\": \"CustomerAsset\",\n    \"category\": \"tank\",\n    \"customer_code\": \"900245\",\n    \"shipto_code\": \"900245002\",\n    \"product_code\": [\n        \"2030\",\n        \"2075\"\n    ],\n    \"erp_id\": \"50321\",\n    \"name\": \"Mega Fuel Reservoir\",\n    \"capacity\": \"10000\",\n    \"is_active\": \"true\"\n}",
+							"raw": "{\n    \"type\": \"CustomerAsset\",\n    \"category\": \"tank\",\n    \"customer_erp_id\": \"900245\",\n    \"shipto_code\": \"900245002\",\n    \"product_code\": [\n        \"2030\",\n        \"2075\"\n    ],\n    \"erp_id\": \"50321\",\n    \"name\": \"Mega Fuel Reservoir\",\n    \"capacity\": \"10000\",\n    \"is_active\": \"true\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
