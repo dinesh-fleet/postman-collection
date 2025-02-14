@@ -2,7 +2,7 @@
 	"info": {
 		"_postman_id": "e70a67d7-ca3c-45bd-9078-0ffe6f07ce1f",
 		"name": "Fleetpanda Import",
-		"description": "Fleetpanda Data Import API Endpoints.\n\nPlease contact the support team for your API key. You can reach for support on [onboarding@fleetpanda.com](https://mailto:onboarding@fleetpanda.com)",
+		"description": "Fleetpanda Data Import API Endpoints.\n\nPlease contact the support team for your API key. You can reach for support on [onboarding@fleetpanda.com](https://mailto:onboarding@fleetpanda.com)\n\nError response will be in the following format:\n\n```\nHTTP/1.1 422 Unprocessable Content\nContent-Type: application/problem+json\nContent-Language: en\n \n{\n \"type\": \"https://example.net/validation-error\",\n \"title\": \"Your request is not valid.\",\n \"errors\": [\n             {\n               \"detail\": \"must be a positive integer\",\n               \"pointer\": \"#/age\"\n             },\n             {\n               \"detail\": \"must be 'green', 'red' or 'blue'\",\n               \"pointer\": \"#/profile/color\"\n             }\n          ]\n}\n\n ```\n\n_Note: There will be updates in this documentation._",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
 	"item": [
@@ -4921,7 +4921,8 @@
 					]
 				}
 			],
-			"id": "970a84fd-b774-473e-b1b7-d78c6e453a7c"
+			"id": "970a84fd-b774-473e-b1b7-d78c6e453a7c",
+			"description": "Pevious endpoint was `api/v3/data_import`\\`"
 		}
 	],
 	"auth": {
