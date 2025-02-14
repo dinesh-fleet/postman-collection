@@ -629,7 +629,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"erp_id\": \"200345\",\n    \"name\": \"Central Fleet Tanker\",\n    \"category\": \"tank_wagon\",  //[ 'tank_wagon', 'truck', 'box_truck', 'flatbed_truck', 'trailer', 'tank', 'vehicle', 'others', 'equipment', 'generator', 'reefer', 'card_lock_pump', 'tractor']\n    \"is_active\": true,\n    \"use_in_delivery\": true,\n    \"type\": \"Fuel Transport\",\n    \"lat\": 40.712776,\n    \"lng\": -74.005974,\n    \"qr_code\": \"QR200345NY\",\n    \"compartments\": [\n        {\n            \"compartment_name\": \"Section ABC\",\n            \"fuel_type\": \"diesel\",\n            \"volume\": 1500,\n            \"erp_id\": \"3467\"\n        }\n    ]\n}",
+							"raw": "{\n    \"erp_id\": \"200345\",\n    \"ship_to_erp_id\": \"ABC\",\n    \"name\": \"Central Fleet Tanker\",\n    \"category\": \"tank_wagon\",  //[ 'tank_wagon', 'truck', 'box_truck', 'flatbed_truck', 'trailer', 'tank', 'vehicle', 'others', 'equipment', 'generator', 'reefer', 'card_lock_pump', 'tractor']\n    \"is_active\": true,\n    \"use_in_delivery\": true,\n    \"type\": \"Fuel Transport\",\n    \"lat\": 40.712776,\n    \"lng\": -74.005974,\n    \"qr_code\": \"QR200345NY\",\n    \"compartments\": [\n        {\n            \"compartment_name\": \"Section ABC\",\n            \"fuel_type\": \"diesel\",\n            \"volume\": 1500,\n            \"erp_id\": \"3467\"\n        }\n    ]\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -902,14 +902,39 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"type\": \"CustomerAsset\",\n    \"category\": \"tank\",\n    \"customer_erp_id\": \"900245\",\n    \"shipto_erp_id\": \"900245002\",\n    \"product_code\": [\n        \"2030\",\n        \"2075\"\n    ],\n    \"erp_id\": \"50321\",\n    \"name\": \"Mega Fuel Reservoir\",\n    \"capacity\": \"10000\",\n    \"is_active\": \"true\"\n}",
+							"raw": "{\n    \"type\": \"CustomerAsset\",\n    \"category\": \"tank_wagon\",  //[ 'tank_wagon', 'truck', 'box_truck', 'flatbed_truck', 'trailer', 'tank', 'vehicle', 'others', 'equipment', 'generator', 'reefer', 'card_lock_pump', 'tractor']\n    \"customer_erp_id\": \"900245\",\n    \"shipto_erp_id\": \"900245002\",\n    \"product_code\": [\n        \"2030\",\n        \"2075\"\n    ],\n    \"erp_id\": \"50321\",\n    \"name\": \"Mega Fuel Reservoir\",\n    \"capacity\": \"10000\",\n    \"is_active\": \"true\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "{{HOSTNAME}}/api/v2/quick_bridge/assets",
+						"url": {
+							"raw": "{{HOSTNAME}}/api/v2/quick_bridge/customers/:customer_erp_id/ship_tos/:ship_to_erp_id/assets",
+							"host": [
+								"{{HOSTNAME}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"quick_bridge",
+								"customers",
+								":customer_erp_id",
+								"ship_tos",
+								":ship_to_erp_id",
+								"assets"
+							],
+							"variable": [
+								{
+									"key": "customer_erp_id",
+									"value": ""
+								},
+								{
+									"key": "ship_to_erp_id",
+									"value": ""
+								}
+							]
+						},
 						"description": "### POST /api/v2/quick_bridge/assets\n\nThis endpoint is used to create a new asset in the system.\n\n**Request Body**\n\n- `type` (text, required): The type of asset, e.g. CustomerAsset, defult: CustomerAsset\n    \n- `category` (text, required): The category of the asset, e.g. tank. defult: 'truck'\n    \n- `customer_code` (text, required): The erp_id of the customer associated with the asset.\n    \n- `shipto_code` (text, required): The erp_id of the ship-to location associated with the asset.\n    \n- `product_code` (text, required): The erp_id of the product associated with the asset.\n    \n- `erp_id` (text, required): The uniq ID of the asset.\n    \n- `name` (text, required): The name of the asset, e.g. Super Tank.\n    \n- `use_in_delivery` (text, required): Indicates if the asset is used in delivery.\n    \n- `capacity` (text, required): The capacity of the asset.\n    \n- `is_active` (text, required): Indicates if the asset is active."
 					},
 					"response": [
