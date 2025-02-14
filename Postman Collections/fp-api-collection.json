@@ -869,7 +869,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"erp_id\": \"200345\",\n    \"name\": \"Central Fleet Tanker\",\n    \"category\": \"tank_wagon\",  //[ 'tank_wagon', 'truck', 'box_truck', 'flatbed_truck', 'trailer', 'tank', 'vehicle', 'others', 'equipment', 'generator', 'reefer', 'card_lock_pump', 'tractor']\n    \"is_active\": true,\n    \"use_in_delivery\": true,\n    \"type\": \"Fuel Transport\",\n    \"lat\": 40.712776,\n    \"lng\": -74.005974,\n    \"qr_code\": \"QR200345NY\",\n    \"compartments\": [\n        {\n            \"compartment_name\": \"Section A\",\n            \"fuel_type\": \"diesel\",\n            \"volume\": 1500,\n            \"erp_id\": \"3467\"\n        }\n    ]\n}",
+							"raw": "{\n    \"erp_id\": \"200345\",\n    \"name\": \"Central Fleet Tanker\",\n    \"category\": \"tank_wagon\",  //[ 'tank_wagon', 'truck', 'box_truck', 'flatbed_truck', 'trailer', 'tank', 'vehicle', 'others', 'equipment', 'generator', 'reefer', 'card_lock_pump', 'tractor']\n    \"is_active\": true,\n    \"use_in_delivery\": true,\n    \"type\": \"Fuel Transport\",\n    \"lat\": 40.712776,\n    \"lng\": -74.005974,\n    \"qr_code\": \"QR200345NY\",\n    \"compartments\": [\n        {\n            \"compartment_name\": \"Section ABC\",\n            \"fuel_type\": \"diesel\",\n            \"volume\": 1500,\n            \"erp_id\": \"3467\"\n        }\n    ]\n}",
 							"options": {
 								"raw": {
 									"language": "json"
