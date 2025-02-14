@@ -4524,13 +4524,18 @@
 			"id": "77b85136-fc73-4bb6-825e-5fe5ae9bc137"
 		},
 		{
-			"name": "Delivery Order",
+			"name": "Delivery Orders",
 			"item": [
 				{
-					"name": "Data imports",
+					"name": "Delivery Order",
 					"id": "98c40369-c795-4b50-9935-0615ecbfa4fb",
 					"protocolProfileBehavior": {
-						"disableBodyPruning": true
+						"disableBodyPruning": true,
+						"disabledSystemHeaders": {
+							"accept": true,
+							"user-agent": true,
+							"content-type": true
+						}
 					},
 					"request": {
 						"method": "POST",
@@ -4538,6 +4543,21 @@
 							{
 								"key": "X_API_KEY",
 								"value": "{{API_KEY}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "User-Agent",
+								"value": "VendorName ContactEmail",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
 								"type": "text"
 							}
 						],
@@ -4550,8 +4570,8 @@
 								}
 							}
 						},
-						"url": "{{IIT}}/api/v3/data_imports",
-						"description": "### POST /api/v3/data_imports\n\nThis endpoint is used to initiate a data import process.\n\n[Full API Description](https://fleetpanda.notion.site/Import-Orders-Structure-0e2780c9b834475682596be6adf44389#e4248493617b4cc39d2e2d41cebcdd8f)\n\nPlease contact the support team for your API key."
+						"url": "{{IIT}}/api/v2/quick_bridge/delivery_orders",
+						"description": "### POST /api/v2/quick_bridge/delivery_orders\n\nThis endpoint is used to initiate a data import process.\n\n[Full API Description](https://fleetpanda.notion.site/Import-Orders-Structure-0e2780c9b834475682596be6adf44389#e4248493617b4cc39d2e2d41cebcdd8f)\n\nPlease contact the support team for your API key."
 					},
 					"response": [
 						{
