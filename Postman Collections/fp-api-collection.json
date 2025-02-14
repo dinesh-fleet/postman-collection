@@ -2263,7 +2263,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"order_id\": 291596,\n    \"status\": \"Synced\", // [\"Synced\", \"Failed\"]\n    \"message\": \"successfully synced\"\n}",
+							"raw": "{\n    \"status\": \"Synced\", // [\"Synced\", \"Failed\"]\n    \"external_bo_id\": \"EX-001\",\n    \"message\": \"successfully synced\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -2562,7 +2562,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"order_id\": 1485707,\n    \"status\": \"Synced\",\n    \"external_bo_id\": \"\",\n    \"message\": \"successfully synced\"\n}",
+							"raw": "{\n    \"status\": \"Synced\",\n    \"external_bo_id\": \"EX-001\",\n    \"message\": \"successfully synced\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -4348,14 +4348,14 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"data\": [\n        {\n            \"DriverId\": \"D_001\",\n            \"ShipTo\": \"54\",\n            \"TimeStamp\": \"1653971593\",\n            \"Products\": [\n                {\n                    \"ProductId\": \"DSL\",\n                    \"Volume\": 1000,\n                    \"AssetId\": \"1AB345\"\n                },\n                {\n                    \"ProductId\": \"DEF\",\n                    \"Volume\": 500,\n                    \"AssetId\": \"Tank101\"\n                }\n            ],\n            \"Notes\": \"Test Notes\",\n            \"PONumber\": \"12323\"\n        },\n        {\n            \"ShipTo\": \"54\",\n            \"TimeStamp\": \"1653971593\",\n            \"Products\": [\n                {\n                    \"ProductId\": \"DSL\",\n                    \"Volume\": 123,\n                    \"AssetId\": \"234\"\n                },\n                {\n                    \"ProductId\": \"DEF\",\n                    \"Volume\": 456,\n                    \"AssetId\": \"TAKNRLF\"\n                }\n            ],\n            \"Notes\": \"Test Noting 12345\",\n            \"PONumber\": \"12323\"\n        }\n    ]\n}",
+							"raw": "{\n    \"data\": [\n        {\n            \"driver_erp_id\": \"D_001\",\n            \"ship_to_erp_id\": \"54\",\n            \"timestamp\": \"1653971593\",\n            \"products\": [\n                {\n                    \"product_erp_id\": \"DSL\",\n                    \"volume\": 1000,\n                    \"asset_erp_id\": \"1AB345\"\n                }\n            ],\n            \"notes\": \"Test Notes\",\n            \"po_number\": \"12323\"\n        },\n        {\n            \"ship_to_erp_id\": \"54\",\n            \"timestamp\": \"1653971593\",\n            \"products\": [\n                {\n                    \"product_erp_id\": \"DSL\",\n                    \"volume\": 123,\n                    \"asset_erp_id\": \"234\"\n                }\n            ],\n            \"notes\": \"Test Noting 12345\",\n            \"po_number\": \"12323\"\n        }\n    ]\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "{{IIT}}/api/v2/quick_bridge/delivery_orders",
+						"url": "{{HOSTNAME}}/api/v2/quick_bridge/delivery_orders",
 						"description": "### POST /api/v2/quick_bridge/delivery_orders\n\nThis endpoint is used to initiate a data import process.\n\n[Full API Description](https://fleetpanda.notion.site/Import-Orders-Structure-0e2780c9b834475682596be6adf44389#e4248493617b4cc39d2e2d41cebcdd8f)\n\nPlease contact the support team for your API key."
 					},
 					"response": [
