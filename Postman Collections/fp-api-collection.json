@@ -902,7 +902,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"type\": \"CustomerAsset\",\n    \"category\": \"tank\",\n    \"customer_erp_id\": \"900245\",\n    \"shipto_code\": \"900245002\",\n    \"product_code\": [\n        \"2030\",\n        \"2075\"\n    ],\n    \"erp_id\": \"50321\",\n    \"name\": \"Mega Fuel Reservoir\",\n    \"capacity\": \"10000\",\n    \"is_active\": \"true\"\n}",
+							"raw": "{\n    \"type\": \"CustomerAsset\",\n    \"category\": \"tank\",\n    \"customer_erp_id\": \"900245\",\n    \"shipto_erp_id\": \"900245002\",\n    \"product_code\": [\n        \"2030\",\n        \"2075\"\n    ],\n    \"erp_id\": \"50321\",\n    \"name\": \"Mega Fuel Reservoir\",\n    \"capacity\": \"10000\",\n    \"is_active\": \"true\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
