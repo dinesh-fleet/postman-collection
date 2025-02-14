@@ -2263,7 +2263,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"status\": \"Synced\", // [\"Synced\", \"Failed\"]\n    \"external_bo_id\": \"EX-001\",\n    \"message\": \"successfully synced\"\n}",
+							"raw": "{\n    \"status\": \"Synced\", // [\"Synced\", \"Failed\"]\n    \"external_bo_id\": \"EX-001\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -2562,7 +2562,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"status\": \"Synced\",\n    \"external_bo_id\": \"EX-001\",\n    \"message\": \"successfully synced\"\n}",
+							"raw": "{\n    \"status\": \"Synced\",\n    \"external_bo_id\": \"EX-001\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
