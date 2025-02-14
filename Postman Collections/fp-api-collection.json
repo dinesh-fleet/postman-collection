@@ -356,7 +356,7 @@
 								}
 							]
 						},
-						"description": "### **POST /api/v2/quick_bridge/shiptos**\n\nThis endpoint is used to create a new ship-to location in the system.\n\n**Request Body**\n\n- `name` (text, required): The name of the shipto.\n    \n- `erp_id` (text, required): The ERP identifier for the shipto.\n    \n- `address` (text, required): The physical address of the shipto.\n    \n- `po_number` (text, required): The purchase order number associated with the shipto.\n    \n- `lat` (float, required): The latitude coordinate of the shipto.\n    \n- `lng` (float, required): The longitude coordinate of the shipto."
+						"description": "### **POST /api/v2/quick_bridge/customers/:customer_erp_id/shiptos**\n\nThis endpoint is used to create a new ship-to location in the system.\n\n**Request Body**\n\n- `name` (text, required): The name of the shipto.\n    \n- `erp_id` (text, required): The ERP identifier for the shipto.\n    \n- `address` (text, required): The physical address of the shipto.\n    \n- `po_number` (text, required): The purchase order number associated with the shipto.\n    \n- `lat` (float, required): The latitude coordinate of the shipto.\n    \n- `lng` (float, required): The longitude coordinate of the shipto."
 					},
 					"response": [
 						{
