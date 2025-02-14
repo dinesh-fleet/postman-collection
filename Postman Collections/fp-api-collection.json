@@ -3115,7 +3115,7 @@
 			"name": "Products",
 			"item": [
 				{
-					"name": "Item Inventories",
+					"name": "Products",
 					"id": "020abc51-40f0-4f44-8f17-c898bb529e38",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true,
@@ -3502,7 +3502,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\": \"Enterprise Terminals & Storage LLC - Jal\",\n    \"erp_id\": \"123-462\",\n    \"address1\": \"Los Angeles\",\n    \"address2\": \"\",\n    \"city\": \"Los Angeles\",\n    \"state\": \"California\",\n    \"zipcode\": \"90001\",\n    \"supplier_erp_id\": \"355374\",\n    \"product_codes\": [\n        \"DSL\",\n        \"DEF\",\n        \"R99\"\n    ]\n}\n",
+							"raw": "{\n    \"name\": \"Enterprise Terminals & Storage LLC - Jal\",\n    \"erp_id\": \"123-462\",\n    \"address1\": \"Los Angeles\",\n    \"address2\": \"\",\n    \"city\": \"Los Angeles\",\n    \"state\": \"California\",\n    \"zipcode\": \"90001\",\n    \"supplier_erp_id\": \"355374\",\n    \"product_erp_ids\": [\n        \"DSL\",\n        \"DEF\",\n        \"R99\"\n    ]\n}\n",
 							"options": {
 								"raw": {
 									"language": "json"
