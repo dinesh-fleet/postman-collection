@@ -902,7 +902,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"type\": \"CustomerAsset\",\n    \"category\": \"tank_wagon\",  //[ 'tank_wagon', 'truck', 'box_truck', 'flatbed_truck', 'trailer', 'tank', 'vehicle', 'others', 'equipment', 'generator', 'reefer', 'card_lock_pump', 'tractor']\n    \"product_code\": [\n        \"2030\",\n        \"2075\"\n    ],\n    \"erp_id\": \"50321\",\n    \"name\": \"Mega Fuel Reservoir\",\n    \"capacity\": \"10000\",\n    \"is_active\": \"true\",\n    \"used_in_delivery\": \"true\"\n}",
+							"raw": "{\n    \"type\": \"CustomerAsset\",\n    \"category\": \"tank_wagon\",  //[ 'tank_wagon', 'truck', 'box_truck', 'flatbed_truck', 'trailer', 'tank', 'vehicle', 'others', 'equipment', 'generator', 'reefer', 'card_lock_pump', 'tractor']\n    \"product_erp_ids\": [\n        \"2030\",\n        \"2075\"\n    ],\n    \"erp_id\": \"50321\",\n    \"name\": \"Mega Fuel Reservoir\",\n    \"capacity\": \"10000\",\n    \"is_active\": \"true\",\n    \"used_in_delivery\": \"true\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -935,7 +935,7 @@
 								}
 							]
 						},
-						"description": "### POST /api/v2/quick_bridge/customers/:customer_erp_id/shiptos/:ship_to_erp_id/assets\n\nThis endpoint is used to create a new asset in the system.\n\n**Request Body**\n\n- `type` (text, required): The type of asset, e.g. CustomerAsset, defult: CustomerAsset\n    \n- `category` (text, required): The category of the asset, e.g. tank. defult: 'truck'\n    \n- `product_code` (text, required): The erp_id of the product associated with the asset.\n    \n- `erp_id` (text, required): The uniq ID of the asset.\n    \n- `name` (text, required): The name of the asset, e.g. Super Tank.\n    \n- `use_in_delivery` (text, required): Indicates if the asset is used in delivery.\n    \n- `capacity` (text, required): The capacity of the asset.\n    \n- `is_active` (text, required): Indicates if the asset is active."
+						"description": "### POST /api/v2/quick_bridge/customers/:customer_erp_id/shiptos/:ship_to_erp_id/assets\n\nThis endpoint is used to create a new asset in the system.\n\n**Request Body**\n\n- `type` (text, required): The type of asset, e.g. CustomerAsset, defult: CustomerAsset\n    \n- `category` (text, required): The category of the asset, e.g. tank. defult: 'truck'\n    \n- `product_erp_ids` (text, required): The erp_id of the product associated with the asset.\n    \n- `erp_id` (text, required): The uniq ID of the asset.\n    \n- `name` (text, required): The name of the asset, e.g. Super Tank.\n    \n- `use_in_delivery` (text, required): Indicates if the asset is used in delivery.\n    \n- `capacity` (text, required): The capacity of the asset.\n    \n- `is_active` (text, required): Indicates if the asset is active."
 					},
 					"response": [
 						{
@@ -2874,7 +2874,7 @@
 							}
 						},
 						"url": "{{HOSTNAME}}/api/v2/quick_bridge/delivery_orders",
-						"description": "### POST /api/v2/quick_bridge/delivery_orders\n\nThis endpoint is used to create delivery order."
+						"description": "### POST /api/v2/quick_bridge/delivery_orders\n\nThis endpoint is used to create delivery order.\n\n`data:`"
 					},
 					"response": [
 						{
