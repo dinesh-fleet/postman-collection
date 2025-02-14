@@ -135,10 +135,6 @@
 									"value": "strict-origin-when-cross-origin"
 								},
 								{
-									"key": "Content-Type",
-									"value": "application/json; charset=utf-8"
-								},
-								{
 									"key": "Cache-Control",
 									"value": "no-cache"
 								},
@@ -165,11 +161,23 @@
 								{
 									"key": "Via",
 									"value": "1.1 vegur"
+								},
+								{
+									"key": "WWW-Authenticate",
+									"value": "Api-Key",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/problem+json",
+									"description": "",
+									"type": "text"
 								}
 							],
 							"cookie": [],
 							"responseTime": null,
-							"body": "{\n    \"success\": false,\n    \"message\": \"Invalid API key\",\n    \"data\": {},\n    \"errorCode\": 0,\n    \"traceId\": null\n}"
+							"body": "{\n \"type\": \"https://example.net/invalid-api-key\",\n \"title\": \"Your API Key is not valid.\"\n}"
 						},
 						{
 							"id": "b671c1fa-4350-40a1-8724-a95a0b5f6602",
