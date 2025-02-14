@@ -2874,7 +2874,7 @@
 							}
 						},
 						"url": "{{HOSTNAME}}/api/v2/quick_bridge/delivery_orders",
-						"description": "### POST /api/v2/quick_bridge/delivery_orders\n\nThis endpoint is used to create delivery order.\n\n`data:`"
+						"description": "### POST /api/v2/quick_bridge/delivery_orders\n\nThis endpoint is used to create delivery order.\n\n`data` (Array Object): Data Payload\n\ndriver_erp_id: erp_id of Driver  \nship_to_erp_id: erp_id of ShipTo  \ntimestamp: Datetime of Delivery Order  \nproducts: Array of Product Objects  \nnotes: Note related with the Order  \npo_number: Purchase Order Number of the Order"
 					},
 					"response": [
 						{
