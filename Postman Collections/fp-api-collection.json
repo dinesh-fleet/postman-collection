@@ -2289,7 +2289,7 @@
 								}
 							]
 						},
-						"description": "## POST /api/v2/quick_bridge/purchase_orders/:order_id\n\nThis endpoint is used to update the status of a purchase order within the FP. Purchase orders can be loading order or extraction order.\n\n### Request Body:\n\nThe request should include the following parameters to update a purchase order:\n\n- **`status`** (string, required): The new status of the order, such as \"Synced,\" \"Failed,\" or other applicable statuses.\n    \n- **`external_bo_id`** (string, optional): The external business object identifier, which could be used for linking to external systems."
+						"description": "## PATCH /api/v2/quick_bridge/purchase_orders/:order_id\n\nThis endpoint is used to update the status of a purchase order within the FP. Purchase orders can be loading order or extraction order.\n\n### Request Body:\n\nThe request should include the following parameters to update a purchase order:\n\n- **`status`** (string, required): The new status of the order, such as \"Synced,\" \"Failed,\" or other applicable statuses.\n    \n- **`external_bo_id`** (string, optional): The external business object identifier, which could be used for linking to external systems."
 					},
 					"response": [
 						{
@@ -2588,7 +2588,7 @@
 								}
 							]
 						},
-						"description": "## POST /api/v2/quick_bridge/sales_orders/:order_id\n\nThis endpoint is used to update the status of a sales order within the FP system.\n\n### Request Body:\n\nThe request should contain the following parameters to update a sales order:\n\n- **`status`** (string, required): The new status of the order. it can be `Synced` or `UnSynced`\n    \n- **`external_bo_id`** (string, optional): The external business object identifier, which could be used for linking to external systems."
+						"description": "## PATCH /api/v2/quick_bridge/sales_orders/:order_id\n\nThis endpoint is used to update the status of a sales order within the FP system.\n\n### Request Body:\n\nThe request should contain the following parameters to update a sales order:\n\n- **`status`** (string, required): The new status of the order. it can be `Synced` or `UnSynced`\n    \n- **`external_bo_id`** (string, optional): The external business object identifier, which could be used for linking to external systems."
 					},
 					"response": [
 						{
